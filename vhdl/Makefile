@@ -21,7 +21,7 @@ vhdl_lexer.cc: vhdl_lexer.l def.h vhdl_parser.tab.h
 
 .PHONY: test
 test:
-	cd test; ./runtests
+	cd test2; ./runtests
 
 .PHONY: install
 install: vhdl.so
