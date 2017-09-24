@@ -1,0 +1,44 @@
+    AST_MODULE <generic.vhd.v:24> [0xPointer] str='\LED_VHDL'
+      AST_WIRE <generic.vhd.v:36> [0xPointer] str='\clk' input port=1
+      AST_WIRE <generic.vhd.v:37> [0xPointer] str='\LED1' output port=2
+      AST_WIRE <generic.vhd.v:38> [0xPointer] str='\LED2' output port=3
+      AST_WIRE <generic.vhd.v:39> [0xPointer] str='\LED3' output port=4
+      AST_WIRE <generic.vhd.v:40> [0xPointer] str='\LED4' output port=5
+      AST_WIRE <generic.vhd.v:41> [0xPointer] str='\LED5' output port=6
+      AST_WIRE <generic.vhd.v:42> [0xPointer] str='\LED6' output port=7
+      AST_WIRE <generic.vhd.v:43> [0xPointer] str='\LED7' output port=8
+      AST_WIRE <generic.vhd.v:44> [0xPointer] str='\LED8' output port=9
+      AST_WIRE <generic.vhd.v:46> [0xPointer] str='\clk'
+      AST_WIRE <generic.vhd.v:47> [0xPointer] str='\LED1'
+      AST_WIRE <generic.vhd.v:48> [0xPointer] str='\LED2'
+      AST_WIRE <generic.vhd.v:49> [0xPointer] str='\LED3'
+      AST_WIRE <generic.vhd.v:50> [0xPointer] str='\LED4'
+      AST_WIRE <generic.vhd.v:51> [0xPointer] str='\LED5'
+      AST_WIRE <generic.vhd.v:52> [0xPointer] str='\LED6'
+      AST_WIRE <generic.vhd.v:53> [0xPointer] str='\LED7'
+      AST_WIRE <generic.vhd.v:54> [0xPointer] str='\LED8'
+      AST_WIRE <generic.vhd.v:57> [0xPointer] str='\half_sec_pulse' reg
+      AST_PARAMETER <generic.vhd.v:63> [0xPointer] str='\s1'
+        AST_CONSTANT <generic.vhd.v:64> [0xPointer] bits='00000000000000000000000000000000'(32) signed range=[31:0]
+        AST_RANGE <generic.vhd.v:63> [0xPointer]
+          AST_CONSTANT <generic.vhd.v:63> [0xPointer] bits='00000000000000000000000000000001'(32) signed range=[31:0] int=1
+          AST_CONSTANT <generic.vhd.v:63> [0xPointer] bits='00000000000000000000000000000000'(32) signed range=[31:0]
+      AST_PARAMETER <generic.vhd.v:63> [0xPointer] str='\s2'
+        AST_CONSTANT <generic.vhd.v:65> [0xPointer] bits='00000000000000000000000000000001'(32) signed range=[31:0] int=1
+        AST_RANGE <generic.vhd.v:63> [0xPointer]
+          AST_CONSTANT <generic.vhd.v:63> [0xPointer] bits='00000000000000000000000000000001'(32) signed range=[31:0] int=1
+          AST_CONSTANT <generic.vhd.v:63> [0xPointer] bits='00000000000000000000000000000000'(32) signed range=[31:0]
+      AST_PARAMETER <generic.vhd.v:63> [0xPointer] str='\s3'
+        AST_CONSTANT <generic.vhd.v:66> [0xPointer] bits='00000000000000000000000000000010'(32) signed range=[31:0] int=2
+        AST_RANGE <generic.vhd.v:63> [0xPointer]
+          AST_CONSTANT <generic.vhd.v:63> [0xPointer] bits='00000000000000000000000000000001'(32) signed range=[31:0] int=1
+          AST_CONSTANT <generic.vhd.v:63> [0xPointer] bits='00000000000000000000000000000000'(32) signed range=[31:0]
+      AST_ALWAYS <generic.vhd.v:74> [0xPointer]
+        AST_POSEDGE <generic.vhd.v:74> [0xPointer]
+          AST_IDENTIFIER <generic.vhd.v:74> [0xPointer] str='\clk'
+        AST_BLOCK <generic.vhd.v:74> [0xPointer]
+          AST_BLOCK <generic.vhd.v:83> [0xPointer]
+            AST_ASSIGN_LE <generic.vhd.v:83> [0xPointer]
+              AST_IDENTIFIER <generic.vhd.v:83> [0xPointer] str='\half_sec_pulse'
+              AST_BIT_NOT <generic.vhd.v:83> [0xPointer]
+                AST_IDENTIFIER <generic.vhd.v:83> [0xPointer] str='\half_sec_pulse'
