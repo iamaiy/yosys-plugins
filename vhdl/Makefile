@@ -6,6 +6,9 @@ PLUGINS_DIR = $(shell yosys-config --datdir)/plugins
 
 OBJS = vhdl_parser.tab.o vhdl_lexer.o vhdl_frontend.o preproc.o
 
+#path to vhd2vl
+VHD2VL	= $(CURDIR)/vhd2vl/src/vhd2vl
+
 vhdl.so: vhdl_parser.tab.o vhdl_lexer.o vhdl_frontend.o preproc.o
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) -shared -o $@ $^ $(LDLIBS)
 	$(MAKE) test
@@ -28,6 +31,16 @@ install: vhdl.so
 	mkdir -p $(PLUGINS_DIR)
 	cp vhdl.so $(PLUGINS_DIR)/vhdl.so
 
+#Download vhd2vl from github
+vhd2vl: vhd2vl-check
+	make -C vhd2vl/src
+
+vhd2vl-check:
+	@echo "Checking for vhd2vl ."
+	@if [ ! -d "./vhd2vl" ]; then \
+		git clone https://github.com/ldoolitt/vhd2vl; \
+	fi
+	
 clean:
 	rm -f *.d *.o vhdl.so vhdl_lexer.cc vhdl_parser.output vhdl_parser.tab.cc vhdl_parser.tab.h
 
